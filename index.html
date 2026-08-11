@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Energy Monitor</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">⚡ Smart Energy Monitor</div>
+
+    <button id="themeBtn">🌙</button>
+</header>
+
+<main>
+
+    <section class="hero">
+        <h1>Smart Energy Monitor</h1>
+        <p>Monitor voltage, current, power, energy and electricity cost.</p>
+
+        <div class="status">
+            <span id="connectionDot"></span>
+            <span id="connectionText">System Online</span>
+        </div>
+    </section>
+
+    <section class="cards">
+
+        <div class="card">
+            <div class="icon">⚡</div>
+            <h3>Voltage</h3>
+            <div class="value">
+                <span id="voltage">230</span> V
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="icon">🔌</div>
+            <h3>Current</h3>
+            <div class="value">
+                <span id="current">2.35</span> A
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="icon">💡</div>
+            <h3>Power</h3>
+            <div class="value">
+                <span id="power">540</span> W
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="icon">🔋</div>
+            <h3>Energy</h3>
+            <div class="value">
+                <span id="energy">4.82</span> kWh
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="icon">💰</div>
+            <h3>Estimated Cost</h3>
+            <div class="value">
+                ₹<span id="cost">38.56</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="icon">🏠</div>
+            <h3>Appliance</h3>
+            <div class="value" id="applianceStatus">
+                ON
+            </div>
+        </div>
+
+    </section>
+
+    <section class="control-panel">
+
+        <h2>Appliance Control</h2>
+
+        <button id="powerBtn" class="on">
+            Turn OFF
+        </button>
+
+        <button id="refreshBtn">
+            🔄 Refresh Data
+        </button>
+
+    </section>
+
+    <section class="graph-section">
+
+        <h2>Live Power Usage</h2>
+
+        <div class="chart-container">
+            <canvas id="energyChart"></canvas>
+        </div>
+
+    </section>
+
+    <section class="information">
+
+        <h2>Energy Information</h2>
+
+        <div class="info-grid">
+
+            <div>
+                <h3>Today's Usage</h3>
+                <p><span id="todayEnergy">4.82</span> kWh</p>
+            </div>
+
+            <div>
+                <h3>Monthly Usage</h3>
+                <p><span id="monthEnergy">82.45</span> kWh</p>
+            </div>
+
+            <div>
+                <h3>Electricity Rate</h3>
+                <p>₹8 / kWh</p>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>Smart Energy Monitor © 2026</p>
+    <p>ESP32 + PZEM-004T Ready</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
